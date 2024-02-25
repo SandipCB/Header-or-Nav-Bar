@@ -1,0 +1,203 @@
+/* 
+---------------------------------------------------------------------
+This CSS code for Home Page All Animation 
+Start from here 
+---------------------------------------------------------------------
+*/
+* {
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #545564;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        font-size: small;
+    }
+
+    header ul {
+        flex-direction: row;
+        align-items: flex-start;
+        grid-template-columns: repeat(3, 1fr);
+        /* Adjusted for 6 rows */
+        grid-gap: 5px;
+        /* Adjusted for spacing between items */
+    }
+
+    header ul li {
+        margin-bottom: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        /* Adjusted for 6 rows */
+        grid-gap: 5px;
+        /* Adjusted for spacing between items */
+    }
+
+    /* Adjust submenu for smaller screens */
+    ul ul {
+        grid-template-columns: repeat(3, 1fr);
+        /* Adjusted for 6 rows */
+        grid-gap: 1px;
+        /* Adjusted for spacing between items */
+    }
+
+    /* Adjust profile link for smaller screens */
+    nav a.profile-link {
+        padding: 10px;
+    }
+
+    nav a.profile-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav a.profile-link .profile-name {
+        font-size: 14px;
+    }
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 0px;
+}
+
+header ul li a {
+    color: #aae8ec;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all ease 0.5s;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: #f09053;
+    z-index: 10;
+}
+
+/* 
+---------------------------------------------------------------------
+This CSS Code For Navbar style 
+Start Here  
+---------------------------------------------------------------------
+*/
+/* SUBMENU */
+ul ul {
+    max-width: 100%;
+    /* Adjusted to cover the full width */
+    position: absolute;
+    padding: 10px 0;
+    opacity: 0;
+    z-index: -9;
+    transition: all ease 0.5s;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjusted for 6 rows */
+    grid-gap: 5px;
+    /* Adjusted for spacing between items */
+}
+
+ul li:hover ul {
+    opacity: 1;
+    z-index: auto;
+    padding: 30px 0;
+}
+
+ul ul li {
+    width: 100%;
+    box-sizing: border-box;
+    border: radius 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+ul ul li a {
+    display: block;
+    padding: 20px;
+    background-color: #383a58;
+    color: #fff;
+    border-radius: 10px;
+}
+
+ul ul li a:hover {
+    background-color: #f09053;
+}
+
+/* NAVIGATION */
+
+nav a {
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+    color: #c8d1fa;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: 0.5s;
+}
+
+nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 5px solid rgb(109, 204, 235);
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+nav a.profile-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+nav a.profile-link img {
+    margin-right: 0px;
+}
+
+nav a.profile-link .profile-name {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+nav a.profile-link:hover .profile-name {
+    display: block;
+}
+
+/*
+---------------------------------------------------------------------
+This CSS Code For Navbar style 
+End Here  
+---------------------------------------------------------------------
+*/
